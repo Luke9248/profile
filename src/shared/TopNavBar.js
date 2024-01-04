@@ -41,8 +41,11 @@ function TopNavBar() {
   return (
     <AppBar position="fixed" sx={{backgroundColor: 'rgb(39, 44, 52)', minHeight:"60px"}}>
       <ListItem key={'a'}>
-        <ListItemButton sx={{ marginLeft: 15 }} onClick={() => navigate('/')}>
-          <ListItemText primary={"Home"} />
+        <ListItemButton sx={{ marginLeft: '2%', maxWidth: '8%'}} onClick={() => navigate('/')}>
+          <ListItemText primary={"Home Page"} />
+        </ListItemButton>
+        <ListItemButton sx={{ marginLeft: '2%', maxWidth: '5%'}} onClick={() => navigate('/projects')}>
+          <ListItemText primary={"Projects"} />
         </ListItemButton>
         {/*<ListItemButton sx={{ textAlign: 'center' }} onClick={() => navigate('/Bella')}>*/}
         {/*  <ListItemText primary={"Bella"} />*/}

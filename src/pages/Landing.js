@@ -1,4 +1,6 @@
 import React, {useContext, useState} from 'react';
+import profilePic from '../images/WechatIMG29399.jpg';
+import UvicPic from '../images/Uvic.jpeg'
 
 import {
   TextField,
@@ -19,27 +21,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 
-// const useStyles = makeStyles(() => ({
-//   container: {
-//     paddingTop: 80,
-//     maxWidth: '500px'
-//   },
-//   paper: {
-//     padding: 30,
-//   },
-//   item: {
-//     marginTop: 20,
-//   },
-//   button: {
-//     marginTop: 30,
-//     marginBottom: 20,
-//   },
-//   link: {
-//     marginTop: 10,
-//     color: '#007dff',
-//   }
-// }));
-
 function Landing() {
   const classes = {};
   // const classes = useStyles();
@@ -49,15 +30,15 @@ function Landing() {
 
   return (
     <Container sx={{maxWidth: '500px'}}>
-      <Paper elevation={5} sx={{ position: 'relative', paddingLeft: 5, paddingTop: 5, paddingBottom: 20}}>
+      <Paper elevation={5} sx={{ position: 'relative', paddingLeft: "5%", paddingTop: "5%", paddingBottom: "20%", paddingRight: '5%', maxWidth: '100%'}}>
 
-        <Card sx={{minWidth: 200, maxWidth: '100%',flexDirection: 'column', marginTop: 15, marginRight: 25}}>
+        <Card sx={{minWidth: '100%', maxWidth: '100%',flexDirection: 'column', marginTop: '15%', marginRight: '15%', overflow: 'auto'}}>
           <Typography
             variant="h4"
             component="div"
             sx={{ marginLeft: 2, marginTop: 2}}   // Spacing between image and name
           >
-            Ruoming(Luke) Ren
+            Ruoming (Luke) Ren
           </Typography>
 
           <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: 2, marginTop: 2 }}>
@@ -72,7 +53,7 @@ function Landing() {
               borderRadius: '50%',
               marginLeft: 1
             }}
-            image="/WechatIMG29399.jpg" // Replace this with the path to your photo
+            image={profilePic} // Replace this with the path to your photo
             alt="Luke" // Replace with your name or a suitable description
           />
             <Box sx={{ marginLeft: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -111,7 +92,7 @@ function Landing() {
           </Box>
         </Card>
 
-        <Card sx={{minWidth: 300, maxWidth: '100%',flexDirection: 'column', marginTop: 10, marginLeft: 30}}>
+        <Card sx={{minWidth: "60%", maxWidth: '100%',flexDirection: 'column', marginTop: '10%', overflow: 'auto', minHeight: 200}}>
           <Typography
             variant="h4"
             component="div"
@@ -122,20 +103,93 @@ function Landing() {
 
           <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: 1, marginTop: 2, marginLeft: 3}}>
             <Typography variant={'body1'}>
-              {'I am a Software and Web Application Developer at Urban Data Centre, under the supervision of Professor '}
+              {'Greetings! I am a dedicated Software and Web Application Developer currently contributing ' +
+                'to projects at the Urban Data Centre, where I have the privilege of working under the guidance of Professor '}
               <Link href="http://www.eil.utoronto.ca/members/msf/"
                     target="_blank"
                     rel="noopener noreferrer"
               sx={{textDecoration: 'none'}}>Mark Fox</Link>
-              {' and Dr. Daniela Rosu. I graduated from the Computer Science Specialist program at the '}
+              {' and Dr. Daniela Rosu. I received a Honors Bachelor\'s degree from the Computer Science Specialist program at the '}
               <Link href="https://web.cs.toronto.edu/about/our-department"
                     target="_blank"
                     rel="noopener noreferrer"
                     sx={{textDecoration: 'none'}}>Department of Computer Science</Link>
-              {' University of Toronto in December 2022. '}
+              {', University of Toronto in December 2022. '}
             </Typography>
           </Box>
         </Card>
+
+
+        <Card sx={{minWidth: "60%", maxWidth: '100%',flexDirection: 'column', marginTop: '10%', overflow: 'auto', minHeight: 200}}>
+          <Typography
+
+            variant="h4"
+            component="div"
+            sx={{ marginLeft: 3, marginTop: 2}}
+          >
+            Education Background
+          </Typography>
+
+          <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: 1, marginTop: 2, marginLeft: 3}}>
+            <Typography variant={'body1'}>
+              {
+                'I studied at the '
+              }
+              <Link href="https://www.uvic.ca/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{textDecoration: 'none'}}>University of Victoria</Link>
+              {' pursuing the Honors Bachelor of Science program, majoring in Mathematics and Computer Science, ' +
+                'from 2017 to 2019. In the summer of 2019, I transferred to the University of Toronto. ' +
+                'I always fondly reminisce about the tranquil and peaceful studying environment at UVic, ' +
+                'and I am deeply grateful to my friends and instructors for their invaluable support and guidance during my time there. ' +
+                'At University of Toronto, I received my Banchelar\'s degree from Department of  Computer Science, Computer Science specialist Program focusing on Artificial Intelligence on 2022 winter.'}
+            </Typography>
+          </Box>
+          <CardMedia
+            component="img"
+            sx={{
+              height: 'auto',   // Height will adjust automatically based on the width while maintaining aspect ratio
+              maxWidth: '400px',  // Optional, set a max width
+              maxHeight: '400px', // Optional, set a max height
+              margin: 3,  // Optional, center the image horizontally
+              marginBottom: 0,
+              marginLeft:'25%'
+            }}
+            image={UvicPic} // Replace this with the path to your photo
+            alt="Uvic" // Replace with your name or a suitable description
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary" sx={{marginLeft: "25%", marginTop: 0}}>
+              Photoed by me, @2021 traveling back to UVIC
+            </Typography>
+          </CardContent>
+        </Card>
+
+        <Card sx={{minWidth: "60%", maxWidth: '100%',flexDirection: 'column', marginTop: '10%', overflow: 'auto', minHeight: 200}}>
+          <Typography
+            variant="h4"
+            component="div"
+            sx={{ marginLeft: 2, marginTop: 2}}
+          >
+            Technical Skills
+          </Typography>
+
+          <Box sx={{alignItems: 'center', marginBottom: 1, marginTop: 2, marginLeft: 3}}>
+            <Typography variant={'h6'}>
+              {'Main Languages: JavaScript, Python, Java, C, C#, SQL, SPARQL, LaTeX'}
+            </Typography>
+            <Typography variant={'h6'}>
+              {'Main Technicals: Full-Stack Web Development, Full-Stack Web Deployment, Unit Test(Including Frontend), ' +
+                'Database Management(Relational and Non-Relational), Machine Learning'}
+            </Typography>
+            <Typography variant={'h6'}>
+              {'Main Technologies: AWS, Docker, Pytorch, Linux, Shell, Git, React, Express.js, Caddy'}
+            </Typography>
+          </Box>
+        </Card>
+
+
 
 
       </Paper>
